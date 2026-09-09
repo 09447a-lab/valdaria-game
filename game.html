@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>صعود الفهد — Valdaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700;900&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="game-shell">
+
+  <!-- شريط علوي -->
+  <div class="topbar">
+    <div class="logo">صُعُودُ الفَهد</div>
+    <div class="topbar-stat">الرصيد<strong id="stat-money">0</strong></div>
+    <div class="topbar-stat">الجنود<strong id="stat-soldiers">0</strong></div>
+    <div class="topbar-stat">
+      جوعك
+      <div class="hunger-bar"><div class="hunger-fill" id="hunger-bar"></div></div>
+    </div>
+    <div class="topbar-stat">جوع الجيش<strong id="stat-army-hunger">0%</strong></div>
+    <div class="topbar-stat">الجولة<strong id="stat-round">1</strong></div>
+    <div class="topbar-stat">الصعوبة<strong id="stat-diff">—</strong></div>
+    <div class="topbar-spacer"></div>
+    <button class="btn-topbar" id="btn-archive">📜 الملف السري</button>
+    <button class="btn-topbar" id="btn-save">💾 حفظ</button>
+    <button class="btn-topbar" id="btn-menu">⚙️</button>
+  </div>
+
+  <div class="game-body">
+    <!-- القائمة الجانبية -->
+    <nav class="sidebar">
+      <button class="nav-btn active" data-page="dashboard">🏠 الرئيسية</button>
+      <button class="nav-btn" data-page="map">🗺️ الخريطة</button>
+      <button class="nav-btn" data-page="economy">💰 الاقتصاد</button>
+      <button class="nav-btn" data-page="market">🛒 الأسواق</button>
+      <button class="nav-btn" data-page="smuggling">🔫 تهريب الأسلحة</button>
+      <button class="nav-btn" data-page="army">🎖️ الجيش</button>
+      <button class="nav-btn" data-page="battle">⚔️ المعارك</button>
+      <button class="nav-btn" data-page="fortification">🛡️ التحصينات</button>
+      <button class="nav-btn" data-page="people">👥 الحلفاء</button>
+    </nav>
+
+    <!-- المحتوى -->
+    <main class="main" id="main"></main>
+  </div>
+</div>
+
+<div id="toast-container"></div>
+<div id="modal-root"></div>
+
+<!-- المكتبات -->
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/state.js"></script>
+<script src="js/economy.js"></script>
+<script src="js/hunger.js"></script>
+<script src="js/market.js"></script>
+<script src="js/smuggling.js"></script>
+<script src="js/fortification.js"></script>
+<script src="js/battle.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/map.js"></script>
+<script src="js/render.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
